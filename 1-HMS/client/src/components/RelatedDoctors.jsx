@@ -1,20 +1,14 @@
 import React from "react";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 const RelatedDoctors = ({ speciality, docId }) => {
   const navigate = useNavigate();
   const { doctors } = useContext(AppContext);
 
-  const [relDoc, setRelDoc] = useState([]);
-  useEffect(() => {
-    if (doctors.length > 0 && speciality) {
-      const doctorsData = doctors.filter(
-        (doc) => doc.speciality === speciality && doc._id !== docId,
-      );
-      setRelDoc(doctorsData);
-    }
-  }, [doctors, speciality, docId]);
+  const relDoc = doctors.filter(
+    (doc) => doc.speciality === speciality && doc._id !== docId,
+  );
   return (
     <div className="flex flex-col items-center gap-4 my-16 text-[#262626]">
       <h1 className="text-3xl font-medium">Related Doctor</h1>
@@ -28,7 +22,7 @@ const RelatedDoctors = ({ speciality, docId }) => {
               navigate(`/appointment/${item._id}`);
               scrollTo(0, 0);
             }}
-            className="border border-[#C9D8FF] rounded overflow-hidden cursor-pointer hover:translate-y-[10px] transition-all duration-500"
+            className="border border-[#C9D8FF] rounded overflow-hidden cursor-pointer hover:translate-y-2.5 transition-all duration-500"
             key={index}
           >
             <img className="bg-[#EAEFFF]" src={item.image} alt="" />

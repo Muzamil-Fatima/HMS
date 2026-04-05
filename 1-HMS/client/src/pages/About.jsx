@@ -12,26 +12,26 @@ const About = () => {
         <img
           src={assets.about_image}
           alt=""
-          className="w-full md:max-w-[360px]"
+          className="w-full md:max-w-90"
         />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600">
           <p>
-            Welcome To Prescripto, Your Trusted Partner In Managing Your
-            HealthCare Needs Conveniently And Efficiently. At Prescripto, We
+            Welcome To MedCare, Your Trusted Partner In Managing Your
+            HealthCare Needs Conveniently And Efficiently. At MedCare, We
             Understand The Challenges Individuals Face When It Comes To
             Scheduling Doctor Appointments And Managing Their Health Records.
           </p>
           <p>
-            Prescripto Is Commited To Excellence In Healthcare Technology. We
+            MedCare Is Commited To Excellence In Healthcare Technology. We
             Continously Strive To Enhance Our Platform, Integrating The Latest
             Advancements To Improve User Experience And Deliver Superior
             Service. Whether You're Booking Your First Appointment Or Managing
-            Ongoing Care, Prescripto Is Here To Support You Every Step Of The
+            Ongoing Care, MedCare Is Here To Support You Every Step Of The
             Way.
           </p>
           <b className="text-gray-800">Our Vision</b>
           <p>
-            Our Vision At Prescripto Is To Create A Seamless HealthCare
+            Our Vision At MedCare Is To Create A Seamless HealthCare
             Experience For Every User. We Aim To Bridge The Gap Between Patients
             And HealthCare Providers, Making It Easier For You To Access The
             Care You Need, When You Need It.

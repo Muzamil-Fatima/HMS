@@ -16,7 +16,7 @@ const SpecialityMenu = () => {
           <Link
             to={`/doctors/${item.speciality}`}
             onClick={() => scrollTo(0, 0)}
-            className="flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500"
+            className="flex flex-col items-center text-xs cursor-pointer shrink-0 hover:translate-y-2.5 transition-all duration-500"
             key={index}
           >
             <p>{item.speciality}</p>

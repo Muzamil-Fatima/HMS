@@ -19,7 +19,7 @@ const TopDoctors = () => {
               navigate(`/appointment/${item._id}`);
               scrollTo(0, 0);
             }}
-            className="border border-[#C9D8FF] rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
+            className="border border-[#C9D8FF] rounded-xl overflow-hidden cursor-pointer hover:translate-y-2.5 transition-all duration-500"
             key={index}
           >
             <img className="bg-[#EAEFFF]" src={item.image} alt="" />
