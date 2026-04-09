@@ -17,7 +17,7 @@ const DoctorDashboard = () => {
     if (dToken) {
       getDashData();
     }
-  }, [dToken]);
+  }, [dToken, getDashData]);
   return (
     dashData && (
       <div className="m-5">

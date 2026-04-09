@@ -135,11 +135,31 @@ const MyAppointments = () => {
       toast.error(error.message);
     }
   };
+  // useEffect(() => {
+  //   if (token) {
+  //     getUserAppointments();
+  //   }
+  // }, [token]);
   useEffect(() => {
-    if (token) {
-      getUserAppointments();
-    }
-  }, [token]);
+    if (!token) return;
+
+    const fetchAppointments = async () => {
+      try {
+        const { data } = await axios.get(
+          `${backendUrl}/api/user/appointments`,
+          {
+            headers: { token },
+          },
+        );
+        setAppointments(data.appointments.reverse());
+      } catch (error) {
+        console.error(error);
+        toast.error(error.message);
+      }
+    };
+
+    fetchAppointments();
+  }, [token, backendUrl]);
   return (
     <div>
       <p className="pb-3 mt-12 text-lg font-medium text-gray-600 border-b">
@@ -181,7 +201,7 @@ const MyAppointments = () => {
                 payment !== item._id && (
                   <button
                     onClick={() => setPayment(item._id)}
-                    className="text-[#696969] sm:min-w-48 py-2 border rounded hover:bg-primary hover:text-white transition-all duration-300"
+                    className="text-[#696969] sm:min-w-48 py-2 border rounded hover:bg-blue-500 hover:text-white transition-all duration-300"
                   >
                     Pay Online
                   </button>

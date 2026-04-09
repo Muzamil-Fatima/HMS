@@ -40,14 +40,14 @@ const DoctorProfile = () => {
     if (dToken) {
       getProfileData();
     }
-  }, [dToken]);
+  }, [dToken, getProfileData]);
   return (
     profileData && (
       <div>
         <div className="'flex flex-col gap-4 m-5">
           <div>
             <img
-              className="bg-primary/80 w-full sm:max-w-64 rounded-lg"
+              className="bg-blue-500/80 w-full sm:max-w-64 rounded-lg"
               src={profileData.image}
               alt=""
             />
@@ -78,7 +78,7 @@ const DoctorProfile = () => {
                       }))
                     }
                     type="text"
-                    className="w-full outline-primary p-2 "
+                    className="w-full outline-blue-500 p-2 "
                     rows={8}
                     value={profileData.about}
                   ></textarea>
@@ -157,14 +157,14 @@ const DoctorProfile = () => {
             {isEdit ? (
               <button
                 onClick={updateProfile}
-                className="px-4 py-1 border-primary text-sm rounded-full mt-5 hover:bg-primary hover:text-white transition-all"
+                className="px-4 py-1 border-blue-500 text-sm rounded-full mt-5 hover:bg-blue-500 hover:text-white transition-all"
               >
                 Save
               </button>
             ) : (
               <button
                 onClick={() => setIsEdit((prev) => !prev)}
-                className="px-4 py-1 border-primary text-sm rounded-full mt-5 hover:bg-primary hover:text-white transition-all"
+                className="px-4 py-1 border-blue-500 text-sm rounded-full mt-5 hover:bg-blue-500 hover:text-white transition-all"
               >
                 Save
               </button>

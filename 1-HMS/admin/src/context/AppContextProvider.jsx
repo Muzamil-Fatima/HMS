@@ -1,7 +1,6 @@
 import React from "react";
-import { createContext } from "react";
+import { AppContext } from "./AppContext";
 
-export const AppContext = createContext();
 const AppContextProvider = (props) => {
   const currency = import.meta.env.VITE_CURRENCY;
   const backendUrl = import.meta.env.VITE_BACKEND_URL;

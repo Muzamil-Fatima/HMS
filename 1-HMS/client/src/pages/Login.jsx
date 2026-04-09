@@ -49,7 +49,7 @@ const Login = () => {
     if (token) {
       navigate("/");
     }
-  }, [token]);
+  }, [token, navigate]);
 
   return (
     <form onSubmit={onSubmitHandler} className="min-h-[80vh] flex items-center">
@@ -93,7 +93,7 @@ const Login = () => {
             required
           />
         </div>
-        <button className="bg-primary text-white w-full py-2 my-2 rounded-md text-base">
+        <button className="bg-blue-500 text-white w-full py-2 my-2 rounded-md text-base">
           {state === "Sign Up" ? "Create account" : "Login"}
         </button>
         {state === "Sign Up" ? (
@@ -101,7 +101,7 @@ const Login = () => {
             Already have an account?{" "}
             <span
               onClick={() => setState("Login")}
-              className="text-primary underline cursor-pointer"
+              className="text-blue-500 underline cursor-pointer"
             >
               Login here
             </span>
@@ -111,7 +111,7 @@ const Login = () => {
             Create an new account?{" "}
             <span
               onClick={() => setState("Sign Up")}
-              className="text-primary underline cursor-pointer"
+              className="text-blue-500 underline cursor-pointer"
             >
               Click here
             </span>

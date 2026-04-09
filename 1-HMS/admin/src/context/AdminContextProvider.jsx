@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { createContext, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
-
-export const AdminContext = createContext();
+import { AdminContext } from "./AdminContext";
 
 const AdminContextProvider = (props) => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;

@@ -1,8 +1,7 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-
-export const DoctorContext = createContext();
+import { DoctorContext } from "./DoctorContext";
 
 const DoctorContextProvider = (props) => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
